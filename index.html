@@ -1372,7 +1372,7 @@ CREATE INDEX idx_products_active ON products(active);</div>
                 </div>
             </div>
         </div>
-
+        <!-- Projet Veille-->
         <div id="projet-veille" class="project-card" style="display: none;">
             <div class="project-header" data-toggle="project">
                 <h3 class="project-title">
@@ -1430,6 +1430,78 @@ CREATE INDEX idx_products_active ON products(active);</div>
                 </div>
             </div>
         </div>
+
+        <div id="projet-portfolio" class="project-card" style="display: none;">
+            <div class="project-header" data-toggle="project">
+                <h3 class="project-title">
+                    <i class="las la-briefcase project-title-icon"></i>
+                    Création de mon Portfolio Personnel
+                </h3>
+                <span class="project-toggle">▼</span>
+            </div>
+            <div class="project-content">
+                <img src="./assets/images/portfolio_image.png" alt="Mon Portfolio" class="project-image">
+                <div class="project-description">
+                    <span class="project-period">Période : Janvier - Mars 2024</span>
+                    <p>Dans le cadre de ma formation en BTS SIO, j'ai créé un **portfolio personnel** pour mettre en valeur mes compétences en développement web, mes projets réalisés et ma démarche d'apprentissage. Ce portfolio sert à la fois de vitrine pour mon travail et comme outil pour organiser et suivre mon **développement professionnel** en informatique.</p>
+        
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Développement Web</span>
+                        <span class="tag">Portfolio</span>
+                    </div>
+        
+                    <h4 class="mt-4 mb-3">Compétence mise en œuvre</h4>
+        
+                    <!-- Compétence unique -->
+                    <div class="competence-item" data-toggle="competence">
+                        <div class="competence-header">
+                            <h5 class="competence-title">
+                                <i class="las la-cogs competence-icon-title"></i>
+                                Organiser son développement professionnel
+                            </h5>
+                            <span class="competence-toggle">▼</span>
+                        </div>
+                        <div class="competence-details">
+                            <div class="proof-item">
+                                <h6 class="proof-title">
+                                    <i class="las la-laptop-code proof-title-icon"></i>
+                                    Mise en place d'un environnement de travail structuré
+                                </h6>
+                                <p>J'ai utilisé ce projet pour organiser mon apprentissage et mes compétences de manière structurée. Le portfolio me permet de centraliser mes réalisations, d’organiser mes compétences par catégories, et de suivre mon évolution dans le domaine du développement web. Cela m'a permis de mieux **planifier mes objectifs professionnels** et de montrer concrètement mes progrès.</p>
+        
+                                <!-- Section pour les images de la preuve -->
+                                <div class="proof-images">
+                                    <!-- Image 1 -->
+                                    <figure>
+                                        <img src="./assets/images/portfolio_structure.png" alt="Structure du Portfolio" class="modal-trigger">
+                                        <figcaption>Structure claire du portfolio pour organiser mes compétences et projets</figcaption>
+                                    </figure>
+                                </div>
+        
+                                <div class="proof-code">
+                                    <!-- Exemple de code HTML de base pour la structure du portfolio -->
+                                    &lt;div class="portfolio"&gt;<br>
+                                    &lt;h2&gt;Mes Projets&lt;/h2&gt;<br>
+                                    &lt;div class="project-item"&gt;<br>
+                                    &lt;h3&gt;Projet Lafleur&lt;/h3&gt;<br>
+                                    &lt;p&gt;Site vitrine pour la société Lafleur&lt;/p&gt;<br>
+                                    &lt;/div&gt;<br>
+                                    &lt;div class="project-item"&gt;<br>
+                                    &lt;h3&gt;Veille Technologique&lt;/h3&gt;<br>
+                                    &lt;p&gt;Suivi des tendances en informatique&lt;/p&gt;<br>
+                                    &lt;/div&gt;<br>
+                                    &lt;/div&gt;<br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
         
 
         
@@ -1449,6 +1521,7 @@ CREATE INDEX idx_products_active ON products(active);</div>
                 const filterBtns = document.querySelectorAll('.filter-btn');
                 const projectCards = document.querySelectorAll('.project-card-small');
                 
+                // Gestion du filtrage des projets
                 filterBtns.forEach(btn => {
                     btn.addEventListener('click', function() {
                         const filter = this.getAttribute('data-filter');
@@ -1491,23 +1564,33 @@ CREATE INDEX idx_products_active ON products(active);</div>
                     });
                 });
                 
-                // Toggle pour les projets et compétences
+                // Toggle pour les projets et compétences (affichage du contenu)
                 document.querySelectorAll('[data-toggle="project"]').forEach(header => {
                     header.addEventListener('click', function() {
                         const parent = this.closest('.project-card');
                         const content = parent.querySelector('.project-content');
                         const toggle = this.querySelector('.project-toggle');
                         
+                        // Permet de basculer l'affichage entre ouvert/fermé
                         content.classList.toggle('active');
                         toggle.classList.toggle('active');
                     });
                 });
                 
+                // Toggle pour les compétences (assurer l'affichage d'une seule compétence)
                 document.querySelectorAll('[data-toggle="competence"]').forEach(item => {
                     item.addEventListener('click', function() {
                         const details = this.querySelector('.competence-details');
                         const toggle = this.querySelector('.competence-toggle');
                         
+                        // Fermer toutes les autres compétences
+                        document.querySelectorAll('.competence-details').forEach(detail => {
+                            if (detail !== details) {
+                                detail.classList.remove('active');
+                            }
+                        });
+                        
+                        // Afficher/fermer la compétence sélectionnée
                         details.classList.toggle('active');
                         toggle.classList.toggle('active');
                     });
@@ -1518,6 +1601,7 @@ CREATE INDEX idx_products_active ON products(active);</div>
                 const modalImg = document.getElementById('modal-img');
                 const modalClose = document.querySelector('.modal-close');
                 
+                // Affichage du modal pour les images
                 document.querySelectorAll('.modal-trigger').forEach(img => {
                     img.addEventListener('click', function(e) {
                         e.stopPropagation();
@@ -1526,11 +1610,12 @@ CREATE INDEX idx_products_active ON products(active);</div>
                     });
                 });
                 
+                // Fermeture du modal
                 modalClose.addEventListener('click', function() {
                     modal.classList.remove('active');
                 });
                 
-                // Fermer le modal en cliquant en dehors
+                // Fermer le modal en cliquant en dehors de l'image
                 modal.addEventListener('click', function(e) {
                     if (e.target === modal) {
                         modal.classList.remove('active');
@@ -1538,6 +1623,7 @@ CREATE INDEX idx_products_active ON products(active);</div>
                 });
             });
         </script>
+        
     </div>
 </section>
         <!-- //BLOG -->

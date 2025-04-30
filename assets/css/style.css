@@ -248,6 +248,5 @@ img {
 
 
 .competence-item .competence-details {
-    max-height: 800px !important;
     overflow-y: auto !important;
 }
