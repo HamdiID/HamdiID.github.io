@@ -238,6 +238,20 @@ img {
     height: 300px;  /* Ajuste la hauteur à ta préférence */
     object-fit: cover;  /* Assure que l'image remplisse bien l'espace sans déformer */
 }
+.modal-image {
+    max-width: 100%;
+    max-height: 80vh;  /* Limite la hauteur à 80% de la hauteur de l'écran */
+    object-fit: contain;  /* Maintient le rapport d'aspect de l'image */
+}
 
+.competence-details {
+    max-height: 800px; /* Ajuste cette valeur selon la hauteur nécessaire */
+    overflow-y: auto;  /* Permet de faire défiler le contenu s'il dépasse la hauteur du conteneur */
+}
+
+/* Optionnel : Ajuster la taille du texte pour éviter les débordements */
+.competence-item {
+    font-size: 14px; /* Ajuste la taille de la police si nécessaire pour éviter que le texte dépasse */
+}
 
 
