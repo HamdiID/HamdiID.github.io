@@ -598,77 +598,125 @@
             <!-- Projet Lapam -->
             <div id="projet-lapam" class="project-card" style="display: none;">
                 <div class="project-header" data-toggle="project">
-                    <h3 class="project-title">
-                        <i class="las la-laptop-code project-title-icon"></i>
-                        Refonte de site web Lapam
-                    </h3>
-                    <span class="project-toggle">▼</span>
+                  <h3 class="project-title">
+                    <i class="las la-leaf project-title-icon"></i>
+                    Refonte du site web de LAPAM
+                  </h3>
+                  <span class="project-toggle">▼</span>
                 </div>
                 <div class="project-content">
-                    <img src="./assets/images/project-3.png" alt="Lapam" class="project-image">
-                    <div class="project-description">
-                        <span class="project-period">Période: 05/01/2024 au 28/02/2024</span>
-                        <p>Refonte complète du site web de Lapam pour améliorer l'ergonomie, les performances et la sécurité de la plateforme.</p>
-                        
-                        <div class="tags">
-                            <span class="tag">PHP</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">Responsive Design</span>
-                            <span class="tag">UX/UI</span>
-                        </div>
-                        
-                        <!-- Compétences associées à ce projet -->
-                        <h4 class="mt-4 mb-3">Compétences mises en œuvre</h4>
-                        
-                        <!-- Compétence 1 -->
-                        <div class="competence-item" data-toggle="competence">
-                            <div class="competence-header">
-                                <h5 class="competence-title">
-                                    <i class="las la-database competence-icon-title"></i>
-                                    Gérer des données
-                                </h5>
-                                <span class="competence-toggle">▼</span>
-                            </div>
-                            <div class="competence-details">
-                                <p>Conception et optimisation de la base de données du site.</p>
-                                
-                                <div class="proof-item">
-                                    <h6 class="proof-title">
-                                        <i class="las la-project-diagram proof-title-icon"></i>
-                                        Modélisation de la base de données
-                                    </h6>
-                                    <p>Création du modèle conceptuel et physique de la base de données avec une structure normalisée pour optimiser les performances et faciliter la maintenance.</p>
-                                    <div class="proof-image">
-                                        <img src="./assets/images/proof-placeholder.jpg" alt="MCD base de données" class="modal-trigger">
-                                    </div>
-                                </div>
-                                
-                                <div class="proof-item">
-                                    <h6 class="proof-title">
-                                        <i class="las la-search proof-title-icon"></i>
-                                        Optimisation des requêtes
-                                    </h6>
-                                    <p>Amélioration des performances en optimisant les requêtes SQL et en mettant en place des index appropriés.</p>
-                                    <div class="proof-code">
--- Exemple de requête optimisée
-SELECT p.id, p.title, p.description, c.name AS category
-FROM products p
-JOIN categories c ON p.category_id = c.id
-WHERE p.active = 1
-ORDER BY p.creation_date DESC
-LIMIT 10;
-
--- Création d'index pour améliorer les performances
-CREATE INDEX idx_products_category ON products(category_id);
-CREATE INDEX idx_products_active ON products(active);</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Autres compétences du projet Lapam peuvent être ajoutées ici -->
+                  <img src="./assets/images/lapam_apres.png" alt="Site final LAPAM" class="project-image">
+                  <div class="project-description">
+                    <span class="project-period">Période : Janvier – Fevrier 2025</span>
+                    <p>Projet réalisé en binôme lors de mon stage chez Micro Osmose. Nous avons procédé à un <b>audit du site existant</b> (hébergé sur Wix) puis à sa <b>migration complète vers WordPress</b> avec amélioration de l'ergonomie, des traductions et du design. L’objectif était de livrer un site professionnel, responsive, multilingue et optimisé pour le référencement.</p>
+              
+                    <div class="tags">
+                      <span class="tag">WordPress</span>
+                      <span class="tag">SEO</span>
+                      <span class="tag">Audit Web</span>
+                      <span class="tag">Accessibilité</span>
+                      <span class="tag">Gestion de projet</span>
                     </div>
+              
+                    <h4 class="mt-4 mb-3">Compétences mises en œuvre</h4>
+              
+                    <!-- 1. Développer la présence en ligne -->
+                    <div class="competence-item" data-toggle="competence">
+                      <div class="competence-header">
+                        <h5 class="competence-title">
+                          <i class="las la-bullhorn competence-icon-title"></i>
+                          Développer la présence en ligne de l'organisation
+                        </h5>
+                        <span class="competence-toggle">▼</span>
+                      </div>
+                      <div class="competence-details">
+                        <div class="proof-item">
+                          <h6 class="proof-title">
+                            <i class="las la-search-location proof-title-icon"></i>
+                            Audit de l’existant et refonte graphique
+                          </h6>
+                          <p>Nous avons identifié des problèmes de typographie, de traduction et d’affichage (menu désorganisé, contenu non traduit, incohérence de style) puis reconstruit le site avec le thème <b>Astra</b>, tout en améliorant sa structure et sa lisibilité.</p>
+                          <div class="proof-images">
+                            <figure>
+                              <img src="./assets/images/lapam_avant_menu.png" alt="Ancien menu Lapam" class="modal-trigger">
+                              <figcaption>Menu Wix avec erreurs de navigation et doublons</figcaption>
+                            </figure>
+                            <figure>
+                              <img src="./assets/images/lapam_apres.png" alt="Site refondu Lapam" class="modal-trigger">
+                              <figcaption>Nouvelle version WordPress avec structure claire et responsive</figcaption>
+                            </figure>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <!-- 2. Travailler en mode projet -->
+                    <div class="competence-item" data-toggle="competence">
+                      <div class="competence-header">
+                        <h5 class="competence-title">
+                          <i class="las la-tasks competence-icon-title"></i>
+                          Travailler en mode projet
+                        </h5>
+                        <span class="competence-toggle">▼</span>
+                      </div>
+                      <div class="competence-details">
+                        <div class="proof-item">
+                          <h6 class="proof-title">
+                            <i class="las la-columns proof-title-icon"></i>
+                            Travail collaboratif et suivi Trello
+                          </h6>
+                          <p>Nous avons utilisé <b>Trello</b> pour organiser nos tâches. Enzo s’est chargé de la page d’accueil et des premières traductions ; j’ai conçu le menu, le footer et toutes les pages secondaires. Nous avons documenté nos choix et testé régulièrement les nouvelles fonctionnalités.</p>
+                          <div class="proof-image">
+                            <img src="./assets/images/trello_lapam.png" alt="Trello LAPAM" class="modal-trigger">
+                            <figcaption>Tableau Trello utilisé pour gérer les étapes de refonte et valider chaque composant</figcaption>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <!-- 3. Mettre à disposition un service informatique -->
+                    <div class="competence-item" data-toggle="competence">
+                      <div class="competence-header">
+                        <h5 class="competence-title">
+                          <i class="las la-hands-helping competence-icon-title"></i>
+                          Mettre à disposition des utilisateurs un service informatique
+                        </h5>
+                        <span class="competence-toggle">▼</span>
+                      </div>
+                      <div class="competence-details">
+                        <div class="proof-item">
+                          <h6 class="proof-title">
+                            <i class="las la-vial proof-title-icon"></i>
+                            Tests, déploiement et traduction multilingue
+                          </h6>
+                          <p>J’ai réalisé des <b>tests d’affichage</b> et de <b>fonctionnalité</b> pour chaque page. J’ai aussi configuré Polylang pour permettre une navigation fluide entre le français et l’anglais. Enfin, nous avons publié le site final sur le domaine lapam-bzh.com.</p>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <!-- 4. Organiser son développement professionnel -->
+                    <div class="competence-item" data-toggle="competence">
+                      <div class="competence-header">
+                        <h5 class="competence-title">
+                          <i class="las la-user-graduate competence-icon-title"></i>
+                          Organiser son développement professionnel
+                        </h5>
+                        <span class="competence-toggle">▼</span>
+                      </div>
+                      <div class="competence-details">
+                        <div class="proof-item">
+                          <h6 class="proof-title">
+                            <i class="las la-lightbulb proof-title-icon"></i>
+                            Apprentissage de WordPress, Polylang et audit technique
+                          </h6>
+                          <p>Ce projet m’a permis de monter en compétences sur <b>WordPress</b> et la <b>réalisation d’un audit technique</b>. J’ai également appris à gérer les traductions multilingues avec Polylang et à maintenir une bonne cohérence visuelle et fonctionnelle sur un site web professionnel.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
+              </div>
+              
 
              <!--Projet GSB applifrais-->
         <div id="projet-gsb" class="project-card" style="display: none;">
