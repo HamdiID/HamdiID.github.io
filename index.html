@@ -423,25 +423,54 @@
                       </div>
                     </div>
               
-                    <!-- Mettre à disposition un service informatique -->
-                    <div class="competence-item" data-toggle="competence">
-                      <div class="competence-header">
-                        <h5 class="competence-title">
-                          <i class="las la-hands-helping competence-icon-title"></i>
-                          Mettre à disposition des utilisateurs un service informatique
-                        </h5>
-                        <span class="competence-toggle">▼</span>
-                      </div>
-                      <div class="competence-details">
-                        <div class="proof-item">
-                          <h6 class="proof-title">
-                            <i class="las la-tools proof-title-icon"></i>
-                            Tests et déploiement du site
-                          </h6>
-                          <p>J’ai réalisé des <b>tests de compatibilité</b> sur différents navigateurs et appareils, intégré des ancres dans le menu et déployé le thème enfant Astra avec du CSS personnalisé. Le site final est fluide, lisible, responsive et adapté aux besoins du client.</p>
-                        </div>
-                      </div>
-                    </div>
+    <!-- Mettre à disposition un service informatique -->
+<div class="competence-item" data-toggle="competence">
+  <div class="competence-header">
+    <h5 class="competence-title">
+      <i class="las la-hands-helping competence-icon-title"></i>
+      Mettre à disposition des utilisateurs un service informatique
+    </h5>
+    <span class="competence-toggle">▼</span>
+  </div>
+  <div class="competence-details">
+    <div class="proof-item">
+      <h6 class="proof-title">
+        <i class="las la-tools proof-title-icon"></i>
+        Tests de compatibilité et création du thème enfant
+      </h6>
+      <p>
+        J’ai réalisé des <b>tests de compatibilité</b> sur plusieurs navigateurs (Chrome, Firefox, Edge) et supports (mobile, tablette) à l’aide d’outils de simulation. 
+        J’ai également créé un <b>thème enfant Astra</b> pour intégrer du CSS personnalisé sans altérer le thème parent.
+      </p>
+
+      <div class="proof-images">
+        <figure>
+          <img src="./assets/images/themeEnfantAstra.png" alt="Thème enfant Astra" class="modal-trigger">
+          <figcaption>Création du thème enfant Astra généré pour intégrer le CSS personnalisé</figcaption>
+        </figure>
+      </div>
+
+      <div class="proof-doc mt-4">
+        <p><b>Document de preuve :</b> Rapport de compatibilité web intégré ci-dessous.</p>
+        <iframe 
+          src="./assets/docs/Test_Compatibilite_Site_MLG.pdf" 
+          width="100%" 
+          height="500px" 
+          style="border: 1px solid #ccc; border-radius: 8px;"
+        >
+          Votre navigateur ne permet pas l'affichage PDF. 
+          <a href="./assets/docs/Test_Compatibilite_Site_MLG.pdf" target="_blank">Cliquez ici pour le télécharger</a>.
+        </iframe>
+        <p class="mt-2">
+          <a class="proof-download" href="./assets/docs/Test_Compatibilite_Site_MLG.pdf" target="_blank">
+            📄 Télécharger le rapport de tests (PDF)
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
               
                     <!-- Organiser son développement professionnel -->
                     <div class="competence-item" data-toggle="competence">
@@ -454,11 +483,22 @@
                       </div>
                       <div class="competence-details">
                         <div class="proof-item">
+                          
                           <h6 class="proof-title">
                             <i class="las la-lightbulb proof-title-icon"></i>
                             Apprentissage autonome de WordPress et WPBakery
                           </h6>
                           <p>Ce stage m’a permis de développer mes compétences en <b>gestion de thème</b>, en <b>personnalisation CSS</b> et en <b>optimisation web</b>. J’ai complété mes connaissances WordPress en explorant le constructeur WPBakery et en manipulant des outils comme Astra Child, Yoast SEO et All-in-One Migration.</p>
+                          <div class="tutorial-card">
+                            <a href="https://www.youtube.com/watch?v=dBSmamZyaeA" target="_blank" class="tutorial-link" >
+                              <img src="https://img.youtube.com/vi/dBSmamZyaeA/hqdefault.jpg" alt="Miniature tutoriel WPBakery" class="tutorial-thumbnail">
+
+                              <div class="tutorial-info">
+                                <h6>Tutoriel WPBakery sur YouTube</h6>
+                                <p>Découverte et prise en main du constructeur de pages WPBakery pour WordPress.</p>
+                              </div>
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1186,6 +1226,8 @@
                         // Activer le bouton cliqué
                         filterBtns.forEach(b => b.classList.remove('active'));
                         this.classList.add('active');
+
+                        
                         
                         // Filtrer les projets
                         projectCards.forEach(card => {
@@ -1233,6 +1275,12 @@
                         toggle.classList.toggle('active');
                     });
                 });
+
+                document.querySelectorAll('.competence-details a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+});
                 
                 // Toggle pour les compétences (assurer l'affichage d'une seule compétence)
                 document.querySelectorAll('[data-toggle="competence"]').forEach(item => {
